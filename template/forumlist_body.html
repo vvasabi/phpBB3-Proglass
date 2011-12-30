@@ -30,7 +30,12 @@
 				<!-- IF S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED --><!-- <a class="feed-icon-forum" title="{L_FEED} - {forumrow.FORUM_NAME}" href="{U_FEED}?f={forumrow.FORUM_ID}"><img src="{T_THEME_PATH}/images/feed.gif" alt="{L_FEED} - {forumrow.FORUM_NAME}" /></a> --><!-- ENDIF -->
 
 					<!-- IF forumrow.FORUM_IMAGE --><span class="forum-image">{forumrow.FORUM_IMAGE}</span><!-- ENDIF -->
-					<a href="{forumrow.U_VIEWFORUM}" class="forumtitle">{forumrow.FORUM_NAME}</a><br />
+					<a href="{forumrow.U_VIEWFORUM}" class="forumtitle">{forumrow.FORUM_NAME}
+            <!-- IF forumrow.FORUM_LOGO -->
+              <img src="{forumrow.FORUM_LOGO}" width="500" height="60" alt="{forumrow.FORUM_NAME}" /></a>
+            <!-- ELSE -->
+              </a><br />
+            <!-- ENDIF -->
 					{forumrow.FORUM_DESC}
 					<!-- IF forumrow.MODERATORS -->
 						<br /><strong>{forumrow.L_MODERATOR_STR}:</strong> {forumrow.MODERATORS}

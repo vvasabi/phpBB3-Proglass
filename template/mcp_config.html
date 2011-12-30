@@ -1,0 +1,70 @@
+<!-- INCLUDE mcp_header.html -->
+
+<!-- DEFINE $CUSTOM_FIELDSET_CLASS = 'forum-selection2' -->
+<!-- INCLUDE jumpbox.html -->
+
+<h2><a href="{U_VIEW_FORUM}">{L_FORUM}: {FORUM_NAME}</a></h2>
+
+<form method="post" id="mcp" action="{S_MCP_ACTION}">
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<!-- IF S_ERROR -->
+	<div class="errorbox">
+		<h3>{L_WARNING}</h3>
+		<p>{ERROR_MSG}</p>
+	</div>
+	<!-- ENDIF -->
+
+	<h3>{L_FORUM_CONFIG}</h3>
+
+	<fieldset>
+	<dl>
+		<dt><label for="forum_desc">{L_FORUM_DESC}:</label><br /><span>{L_FORUM_DESC_EXPLAIN}</span></dt>
+		<dd><textarea id="forum_desc" name="forum_desc" rows="14" class="inputbox">{FORUM_DESC}</textarea></dd>
+		<dd><label><input type="checkbox" class="radio" name="desc_parse_bbcode"<!-- IF S_DESC_BBCODE_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_BBCODE}</label>
+			<label><input type="checkbox" class="radio" name="desc_parse_smilies"<!-- IF S_DESC_SMILIES_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_SMILIES}</label>
+			<label><input type="checkbox" class="radio" name="desc_parse_urls"<!-- IF S_DESC_URLS_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_URLS}</label></dd>
+	</dl>
+	
+	<dl>
+		<dt><label for="forum_rules">{L_FORUM_RULES}:</label><br /><span>{L_FORUM_RULES_EXPLAIN}</span></dt>
+		<dd><textarea id="forum_rules" name="forum_rules" rows="14" class="inputbox">{FORUM_RULES}</textarea></dd>
+		<dd><label><input type="checkbox" class="radio" name="rules_parse_bbcode"<!-- IF S_RULES_BBCODE_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_BBCODE}</label>
+			<label><input type="checkbox" class="radio" name="rules_parse_smilies"<!-- IF S_RULES_SMILIES_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_SMILIES}</label>
+			<label><input type="checkbox" class="radio" name="rules_parse_urls"<!-- IF S_RULES_URLS_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_URLS}</label></dd>
+	</dl>
+
+	<dl>
+		<dt><label for="forum_posting_rules">{L_FORUM_POSTING_RULES}:</label><br /><span>{L_FORUM_POSTING_RULES_EXPLAIN}</span></dt>
+		<dd><textarea id="forum_posting_rules" name="forum_posting_rules" rows="14" class="inputbox">{FORUM_POSTING_RULES}</textarea></dd>
+		<dd><label><input type="checkbox" class="radio" name="posting_rules_parse_bbcode"<!-- IF S_POSTING_RULES_BBCODE_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_BBCODE}</label>
+			<label><input type="checkbox" class="radio" name="posting_rules_parse_smilies"<!-- IF S_POSTING_RULES_SMILIES_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_SMILIES}</label>
+			<label><input type="checkbox" class="radio" name="posting_rules_parse_urls"<!-- IF S_POSTING_RULES_URLS_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_URLS}</label></dd>
+	</dl>
+	
+	<dl>
+		<dt><label for="forum_logo">{L_FORUM_LOGO}:</label><br /><span>{L_FORUM_LOGO_EXPLAIN}</span></dt>
+		<dd><input type="text" id="forum_logo" name="forum_logo" class="inputbox" value="{FORUM_LOGO}" /></dd>
+	</dl>
+	
+	<dl>
+		<dt><label for="forum_topic_types">{L_FORUM_TOPIC_TYPES}:</label><br /><span>{L_FORUM_TOPIC_TYPES_EXPLAIN}</span></dt>
+		<dd><input type="text" id="forum_topic_types" name="forum_topic_types" class="inputbox" value="{FORUM_TOPIC_TYPES}" /></dd>
+	</dl>	
+	
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<fieldset class="submit-buttons">
+	<input type="reset" value="{L_RESET}" name="reset" class="button2" />&nbsp; 
+	<input class="button1" type="submit" value="{L_SUBMIT}" />
+	{S_FORM_TOKEN}
+</fieldset>
+
+</form>
+
+<!-- INCLUDE mcp_footer.html -->

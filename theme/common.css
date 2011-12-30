@@ -10,7 +10,8 @@
 html {
 	font-size: 100%;
 	/* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
-	height: 101%;
+	height: 100%;
+	margin-bottom: 1px;
 }
 
 body {
@@ -102,19 +103,19 @@ p.right {
 /* Main blocks
 ---------------------------------------- */
 #header-bg {
-	width: 804px;
-	height: 141px;
+	width: 950px;
+	height: 125px;
 	margin: auto;
 }
 
 #wrap-bg {
-	width: 804px;
+	width: 950px;
 	margin: auto;
 }
 
 #wrap {
 	padding: 0;
-	width: 780px;
+	width: 926px;
 	margin: auto;
 }
 
@@ -137,7 +138,7 @@ p.right {
 }
 
 #footer-bg {
-	width: 804px;
+	width: 950px;
 	height: 7px;
 	margin: auto;
 }
@@ -153,13 +154,25 @@ a#logo:hover {
 	text-decoration: none;
 }
 
+#tab-selection {
+	float: left;
+	margin-top: 80px;
+	margin-left: 15px;
+}
+
+#tab-selection img {
+	border: 0px;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
 /* Search box
 --------------------------------------------- */
 #search-box {
 	color: #FFFFFF;
 	position: relative;
-	margin-top: 30px;
-	margin-right: 5px;
+	margin-top: 82px;
+	margin-right: 15px;
 	display: block;
 	float: right;
 	text-align: right;
@@ -569,6 +582,14 @@ li.pagination {
 
 /* Miscellaneous styles
 ---------------------------------------- */
+#topic-type-filter {
+	text-align: right;
+}
+
+.forum_logo {
+	margin-bottom: 3px;
+}
+
 #forum-permissions {
 	float: right;
 	width: auto;
@@ -630,7 +651,6 @@ p.rules {
 
 p.rules img {
 	vertical-align: middle;
-	padding-top: 5px;
 }
 
 p.rules a {

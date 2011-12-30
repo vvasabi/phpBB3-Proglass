@@ -110,9 +110,19 @@
 				}
 			// ]]>
 			</script>
-		<!-- ENDIF -->
+    <!-- ELSEIF _file.S_MP3_FILE -->
+      <object type="application/x-shockwave-flash" data="mediaplayer.swf?file={_file.U_FILE_LINK}" width="450" height="20">
+        <param name="movie" value="mediaplayer.swf?file={_file.U_FILE_LINK}" />
+        <param name="allowfullscreen" value="true" />
+      </object>
+    <!-- ELSEIF _file.S_FLV_FILE -->
+      <object type="application/x-shockwave-flash" data="mediaplayer.swf?file={_file.U_FILE_LINK}" width="640" height="500">
+        <param name="movie" value="mediaplayer.swf?file={_file.U_FILE_LINK}" />
+        <param name="allowfullscreen" value="true" />
+      </object>
+    <!-- ENDIF -->
 
-		<!-- IF _file.S_WM_FILE or _file.S_RM_FILE or _file.S_FLASH_FILE or _file.S_QUICKTIME_FILE -->
+		<!-- IF _file.S_WM_FILE or _file.S_RM_FILE or _file.S_FLASH_FILE or _file.S_QUICKTIME_FILE or _file.S_FLV_FILE or _file.S_MP3_FILE -->
 			<p>
 			<!-- IF _file.S_QUICKTIME_FILE --><a href="#" onclick="play_qt_file(document.qtstream_{_file.ATTACH_ID}); return false;">[ {L_PLAY_QUICKTIME_FILE} ]</a> <!-- ENDIF -->
 			<a href="{_file.U_DOWNLOAD_LINK}">{_file.DOWNLOAD_NAME}</a> [ {_file.FILESIZE} {_file.SIZE_LANG} | {_file.L_DOWNLOAD_COUNT} ]</p>
