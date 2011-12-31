@@ -8,7 +8,6 @@
 	<!-- IF ERROR --><p class="error">{ERROR}</p><!-- ENDIF -->
 
 	<!-- IF S_PRIVMSGS and not S_SHOW_DRAFTS -->
-
 		<div class="column1">
 		<!-- IF S_ALLOW_MASS_PM -->
 			<!-- IF .to_recipient -->
@@ -36,12 +35,12 @@
 				</dl>
 			<!-- ENDIF -->
 			<!-- IF not S_EDIT_POST -->
-			<dl class="pmlist">
-				<dt><textarea id="username_list" name="username_list" class="inputbox" cols="50" rows="2"></textarea></dt>
-				<dd><span><a href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a></span></dd>
-				<dd><input type="submit" name="add_to" value="{L_ADD}" class="button2" /></dd>
-				<dd><input type="submit" name="add_bcc" value="{L_ADD_BCC}" class="button2" /></dd>
-			</dl>
+				<dl class="pmlist">
+					<dt><textarea id="username_list" name="username_list" class="inputbox" cols="50" rows="2"></textarea></dt>
+					<dd><span><a href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a></span></dd>
+					<dd><input type="submit" name="add_to" value="{L_ADD}" class="button2" /></dd>
+					<dd><input type="submit" name="add_bcc" value="{L_ADD_BCC}" class="button2" /></dd>
+				</dl>
 			<!-- ENDIF -->
 		<!-- ELSE -->
 			<dl>
@@ -77,27 +76,27 @@
 	<!-- ENDIF -->
 
 	<!-- IF S_DELETE_ALLOWED -->
-	<dl>
-		<dt><label for="delete">{L_DELETE_POST}:</label></dt>
-		<dd><label for="delete"><input type="checkbox" name="delete" id="delete" /> {L_DELETE_POST_WARN}</label></dd>
-	</dl>
+		<dl>
+			<dt><label for="delete">{L_DELETE_POST}:</label></dt>
+			<dd><label for="delete"><input type="checkbox" name="delete" id="delete" /> {L_DELETE_POST_WARN}</label></dd>
+		</dl>
 	<!-- ENDIF -->
 
 	<!-- IF S_SHOW_TOPIC_ICONS or S_SHOW_PM_ICONS -->
-	<dl>
-		<dt><label for="icon">{L_ICON}:</label></dt>
-		<dd>
-			<label for="icon"><input type="radio" name="icon" id="icon" value="0" checked="checked" /> <!-- IF S_SHOW_TOPIC_ICONS -->{L_NO_TOPIC_ICON}<!-- ELSE -->{L_NO_PM_ICON}<!-- ENDIF --></label>
-			<!-- BEGIN topic_icon --><label for="icon-{topic_icon.ICON_ID}"><input type="radio" name="icon" id="icon-{topic_icon.ICON_ID}" value="{topic_icon.ICON_ID}" {topic_icon.S_ICON_CHECKED} /><img src="{topic_icon.ICON_IMG}" width="{topic_icon.ICON_WIDTH}" height="{topic_icon.ICON_HEIGHT}" alt="" title="" /></label> <!-- END topic_icon -->
-		</dd>
-	</dl>
+		<dl>
+			<dt><label for="icon">{L_ICON}:</label></dt>
+			<dd>
+				<label for="icon"><input type="radio" name="icon" id="icon" value="0" checked="checked" /> <!-- IF S_SHOW_TOPIC_ICONS -->{L_NO_TOPIC_ICON}<!-- ELSE -->{L_NO_PM_ICON}<!-- ENDIF --></label>
+				<!-- BEGIN topic_icon --><label for="icon-{topic_icon.ICON_ID}"><input type="radio" name="icon" id="icon-{topic_icon.ICON_ID}" value="{topic_icon.ICON_ID}" {topic_icon.S_ICON_CHECKED} /><img src="{topic_icon.ICON_IMG}" width="{topic_icon.ICON_WIDTH}" height="{topic_icon.ICON_HEIGHT}" alt="" title="" /></label> <!-- END topic_icon -->
+			</dd>
+		</dl>
 	<!-- ENDIF -->
 
 	<!-- IF not S_PRIVMSGS and S_DISPLAY_USERNAME -->
-	<dl style="clear:left">
-		<dt><label for="username">{L_USERNAME}:</label></dt>
-		<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{USERNAME}" class="inputbox autowidth" /></dd>
-	</dl>
+		<dl style="clear:left">
+			<dt><label for="username">{L_USERNAME}:</label></dt>
+			<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{USERNAME}" class="inputbox autowidth" /></dd>
+		</dl>
 	<!-- ENDIF -->
 
 	<!-- IF S_POST_ACTION or S_PRIVMSGS or S_EDIT_DRAFT -->
@@ -125,14 +124,14 @@
 		<!-- ENDIF -->
 
 		<!-- IF BBCODE_STATUS -->
-		<!-- IF .smiley --><hr /><!-- ENDIF -->
-		{BBCODE_STATUS}<br />
-		<!-- IF S_BBCODE_ALLOWED -->
-			{IMG_STATUS}<br />
-			{FLASH_STATUS}<br />
-			{URL_STATUS}<br />
-		<!-- ENDIF -->
-		{SMILIES_STATUS}
+			<!-- IF .smiley --><hr /><!-- ENDIF -->
+			{BBCODE_STATUS}<br />
+			<!-- IF S_BBCODE_ALLOWED -->
+				{IMG_STATUS}<br />
+				{FLASH_STATUS}<br />
+				{URL_STATUS}<br />
+			<!-- ENDIF -->
+			{SMILIES_STATUS}
 		<!-- ENDIF -->
 		<!-- IF S_EDIT_DRAFT || S_DISPLAY_REVIEW -->
 			<!-- IF S_DISPLAY_REVIEW --><hr /><!-- ENDIF -->
