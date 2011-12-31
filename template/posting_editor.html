@@ -271,6 +271,14 @@
 				<div><label for="lock_post"><input type="checkbox" name="lock_post" id="lock_post"{S_LOCK_POST_CHECKED} /> {L_LOCK_POST} [{L_LOCK_POST_EXPLAIN}]</label></div>
 			<!-- ENDIF -->
 
+			<!-- mod : TOPIC COLOUR -->
+			<!-- by : wasabi -->
+			<!-- IF S_COLOUR_TOGGLE -->
+			<div><label for="topic_colour-0"><!-- IF S_EDIT_POST -->{L_CHANGE_COLOUR_TO}<!-- ELSE -->{L_POST_TOPIC_COLOUR_AS}<!-- ENDIF -->:</label>
+			<!-- BEGIN topic_colour --><label for="topic_colour-{topic_colour.VALUE}"><input type="radio" name="topic_colour" id="topic_colour-{topic_colour.VALUE}" value="{topic_colour.VALUE}"{topic_colour.S_CHECKED} /><!-- IF topic_colour.COLOUR_CODE --><span style="color: #{topic_colour.COLOUR_CODE}"><!-- ENDIF -->{topic_colour.L_TOPIC_COLOUR}</span><!-- IF topic_colour.COLOUR_CODE --></span><!-- ENDIF --></label> <!-- END topic_colour --></div>
+			<!-- ENDIF -->
+			<!-- fin mod: TOPIC_COLOUR -->
+
 			<!-- IF S_TYPE_TOGGLE or S_TOPIC_TYPE_ANNOUNCE or S_TOPIC_TYPE_STICKY -->
 			<hr class="dashed" />
 			<!-- ENDIF -->
