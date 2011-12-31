@@ -1,12 +1,11 @@
 /* Proglass Print Style Sheet
 -------------------------------------------------
-	Author: statm1; subBlue  ( http://www.subBlue.com/ )
-	Version: 3.0.7
-
-	Copyright 2004 phpBB Group
+	Author:  statm1
+	Version: 2.0.4
+	Copyright: 2010 statm1; 2007 phpBB Group
+	Original Author: Synaptic Anarchy
 -------------------------------------------------*/
 
-/* Lots still TODO here! */
 /* General markup styles */
 * {padding: 0;margin: 0}
 
@@ -22,14 +21,11 @@ a:active	{ color: #000000; text-decoration: none; }
 img, .noprint, #sub-header, #sub-footer, .navbar, .box1, .divider, .signature { display: none; }
 /* Display smilies (Bug #47265) */
 .content img {display: inline}
-
 /* Container for the main body */
 #wrap {margin: 0 2em}
-
 p {font-size: 85%}
 .copyright {font-size: 75%}
 .page-number {float:right; width: auto; text-align: right; font-size: 75%}
-
 h1, h2, h3, h1 a, h2 a, h3 a {
 	font-family: "Trebuchet MS",georgia,Verdana,Sans-serif;
 	color: #000000;
@@ -37,11 +33,9 @@ h1, h2, h3, h1 a, h2 a, h3 a {
 	text-decoration: none;
 	font-weight: bold;
 }
-
 h1 {font-size: 20pt;}
 h2 {font-size: 16pt; margin-top: 1em}
 h3 {font-size: 14pt; margin-top: 1em}
-
 .content {
 	font-size: 11pt;
 	line-height: 14pt;
@@ -49,7 +43,6 @@ h3 {font-size: 14pt; margin-top: 1em}
 	font-family: "Lucida Grande", "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 	overflow: hidden;
 }
-
 /* CSS2 Print tip from: http://www.alistapart.com/articles/goingtoprint/ */
 .postbody a:link, .postbody a:visited, .postbody a:active, .postbody a:hover {
 	text-decoration: underline;
@@ -129,3 +122,6 @@ div.spacer {clear: both}
 
 /* Accessibility tweaks: Mozilla.org */
 .skip_link {display: none}
+
+dl.codebox dt{display:none}
+
