@@ -1,0 +1,1 @@
+Please note that this is not the official github repository of the Proglass theme. This repository is intended as my personal working copy. To get the official version, please visit phpbb.com, or use any of the official-* branches I have set up. (If you trust me, that is.)
