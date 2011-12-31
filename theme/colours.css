@@ -239,7 +239,8 @@ li.reported:hover {
 
 div.rules {
 	background-color: #D8DDE9;
-	color: #3D67A9;
+	/* color: #3D67A9; */
+	color: #4B505E;
 }
 
 p.rules {
@@ -478,10 +479,6 @@ blockquote {
 	background-color: #DDE2EB;
 	background-image: url("{T_THEME_PATH}/images/quote.gif");
 	border-color:#CED2DB;
-}
-
-.rtl blockquote {
-	background-image: url("{T_THEME_PATH}/images/quote_rtl.gif");
 }
 
 blockquote blockquote {
@@ -809,11 +806,6 @@ ul.cplist {
 	background-image: url("{T_THEME_PATH}/images/bg_menu.gif");
 }
 
-.rtl #navigation a {
-	background-image: url("{T_THEME_PATH}/images/bg_menu_rtl.gif");
-	background-position: 0 100%;
-}
-
 #navigation a:hover {
 	background-color: #B1B7BF;
 	color: #3D67A9;
@@ -890,12 +882,6 @@ dl.mini dt {
 /* PM Message history */
 .current {
 	color: #999999 !important;
-}
-
-/* PM panel adjustments */
-.pm-panel-header,
-#cp-main .pm-message-nav {
-	border-bottom-color: #A4B3BF;
 }
 
 /* PM marking colours */

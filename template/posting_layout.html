@@ -21,6 +21,17 @@
 	</div>
 <!-- ENDIF -->
 
+<!-- IF S_FORUM_POSTING_RULES -->
+	<div class="rules">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		
+		<strong>{L_FORUM_POSTING_RULES}</strong><br />
+		{FORUM_POSTING_RULES}
+		
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- ENDIF -->
+
 <form id="postform" method="post" action="{S_POST_ACTION}"{S_FORM_ENCTYPE}>
 
 <!-- IF S_DRAFT_LOADED -->

@@ -1,12 +1,6 @@
 
-function fontsizeup(event)
+function fontsizeup()
 {
-	// Skip tabs; 9 being the ASCII code for a tab
-	if (event && getKeyCode(event) == 9)
-	{
-		return true;
-	}
-
 	var active = getActiveStyleSheet();
 
 	switch (active)
@@ -35,19 +29,11 @@ function fontsizeup(event)
 			setActiveStyleSheet('A');
 		break;
 	}
-
-	return false;
 }
 
-function fontsizedown(event)
+function fontsizedown()
 {
-	// Skip tabs
-	if (event && getKeyCode(event) == 9)
-	{
-		return true;
-	}
-
-	var active = getActiveStyleSheet();
+	active = getActiveStyleSheet();
 
 	switch (active)
 	{
@@ -74,24 +60,6 @@ function fontsizedown(event)
 			setActiveStyleSheet('A--');
 		break;
 	}
-
-	return false;
-}
-
-function getKeyCode(event)
-{
-	// IE doesn't fire the onkeypress event for tabs
-	// Reference: http://www.quirksmode.org/js/keys.html
-
-	var code = (event.keyCode) ? event.keyCode : 0;
-
-	// Probably using FF
-	if (!code && event.charCode)
-	{
-		code = event.charCode;
-	}
-
-	return code;
 }
 
 function setActiveStyleSheet(title)

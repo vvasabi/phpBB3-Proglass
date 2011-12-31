@@ -77,14 +77,14 @@ a.topictitle:active {
 .postlink {
 	text-decoration: none;
 	color: #d2d2d2;
-	border-bottom: 1px solid #d2d2d2;
+/*	border-bottom: 1px solid #d2d2d2; */
 	padding-bottom: 0;
 }
 
 .postlink:visited {
 	color: #bdbdbd;
-	border-bottom-style: dotted;
-	border-bottom-color: #666666;
+/*	border-bottom-style: dotted;
+	border-bottom-color: #666666; */
 }
 
 .postlink:active {
@@ -92,8 +92,8 @@ a.topictitle:active {
 }
 
 .postlink:hover {
-	background-color: #f6f6f6;
-	text-decoration: none;
+/*	background-color: #f6f6f6; */
+	text-decoration: underline;
 	color: #404040;
 }
 
@@ -204,10 +204,4 @@ a.right:hover {
 	position: absolute;
 	left: -999px;
 	width: 990px;
-}
-
-/* Feed icon in forumlist_body.html */
-a.feed-icon-forum {
-	float: right;
-	margin: 3px;
 }

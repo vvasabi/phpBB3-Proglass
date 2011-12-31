@@ -255,11 +255,6 @@ fieldset.submit-buttons input {
 	width: 80%;
 }
 
-#message-box-qr {
-	margin: 0 auto;
-	width: 98%;
-}
-
 #message-box textarea {
 	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
 	width: 100%;
@@ -297,6 +292,7 @@ fieldset.submit-buttons input {
 }
 
 input.inputbox	{ width: 85%; }
+input.large		{ width: 75%; }
 input.medium	{ width: 50%; }
 input.narrow	{ width: 25%; }
 input.tiny		{ width: 125px; }
@@ -387,6 +383,3 @@ input.search {
 .narrow { width: 25%;}
 .tiny { width: 10%;}
 
-.section-ucp #tz  {
-   width: 100% !important;
-}

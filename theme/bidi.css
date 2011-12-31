@@ -1,4 +1,4 @@
-﻿/* proSilver RTL definitions
+/* proSilver RTL definitions
 ---------------------------------------- */
 
 /**
@@ -234,33 +234,9 @@
 	padding-right: 15px;
 }
 
-.rtl .skiplink {
-	/* invisible skip link, used for accessibility  */
-	position: relative;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	display: block;
-	left: 0;
-}
-
-.rtl a.feed-icon-forum {
-	float: left;
-}
-
 /**
 * content.css
 */
-.rtl ul.topiclist dfn {
-	/* Labels for post/view counts */
-	position: relative;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	display: block;
-	left: 0;
-}
-
 .rtl ul.topiclist dt {
 	float: right;
 }
@@ -371,12 +347,11 @@
 /* Quote block */
 .rtl blockquote {
 	margin: 0.5em 25px 0 1px;
-	background-position: 99% 5px;
 }
 
 .rtl blockquote blockquote {
 	/* Nested quotes */
-	margin: 0.5em 15px 0 1px;
+	margin: 0.5em 15px 0 1px;	
 }
 
 .rtl blockquote cite {
@@ -743,8 +718,7 @@
 /**
 * tweaks.css
 */
-
-/** Reference: Bug #27155 */
+ /** Reference: Bug #27155 */
 .rtl #wrap, .rtl .headerbar, .rtl #site-description, .rtl .navbar {
 	position: relative;
 }

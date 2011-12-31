@@ -29,7 +29,7 @@ ul.topiclist li.row dl {
 ul.topiclist dt {
 	display: block;
 	float: left;
-	width: 50%;
+	width: 55%;
 	font-size: 1.1em;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -44,9 +44,7 @@ ul.topiclist dd {
 
 ul.topiclist dfn {
 	/* Labels for post/view counts */
-	position: absolute;
-	left: -999px;
-	width: 990px;
+	display: none;
 }
 
 ul.topiclist li.row dt a.subforum {
@@ -126,26 +124,14 @@ dl.icon dt {
 }
 
 dd.posts, dd.topics, dd.views {
-	width: 8%;
+	width: 7%;
 	text-align: center;
 	line-height: 2.2em;
 	font-size: 1.2em;
 }
 
-/* List in forum description */
-dl.icon dt ol,
-dl.icon dt ul {
-	list-style-position: inside;
-	margin-left: 1em;
-}
-
-dl.icon dt li {
-	display: list-item;
-	list-style-type: inherit;
-}
-
 dd.lastpost {
-	width: 25%;
+	width: 23%;
 	font-size: 1.1em;
 }
 
@@ -229,7 +215,7 @@ div[class].topic-actions {
 	padding: 0;
 	line-height: 1.48em;
 	color: #333333;
-	width: 76%;
+	width: 80%;
 	float: left;
 	clear: both;
 }
@@ -307,7 +293,6 @@ div[class].topic-actions {
 	font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	color: #333333;
-	padding-bottom: 1px;
 }
 
 .content h2, .panel h2 {
@@ -565,7 +550,7 @@ dl.codebox code {
 .attach-image {
 	margin: 3px 0;
 	width: 100%;
-	max-height: 350px;
+	max-height: 600px;
 	overflow: auto;
 }
 
@@ -723,12 +708,13 @@ fieldset.polls dd div {
 	min-height: 80px;
 	color: #666666;
 	border-left: 1px solid #FFFFFF;
-	width: 22%;
+	width: 19%;
 	float: right;
 	display: inline;
 }
 .pm .postprofile {
 	border-left: 1px solid #DDDDDD;
+	width: 23%;
 }
 
 .postprofile dd, .postprofile dt {
@@ -769,4 +755,248 @@ dl.pmlist dt textarea {
 dl.pmlist dd {
 	margin-left: 61% !important;
 	margin-bottom: 2px;
+}
+
+/* Viewforum */
+.topic-hidden {
+	font-weight: bold;
+}
+
+/* Wiki */
+/* Wiki Syntax */
+div.wiki_syntax {
+	border: 1px dashed #ccc;
+	background: #fff;
+	width: 98%;
+	margin: 0px;
+	padding: 5px;
+	line-height: 150%;
+}
+
+div.wiki_syntax a {
+  text-decoration: none;
+}
+
+div.wiki_syntax a:hover {
+  text-decoration: underline;
+}
+
+div.wiki_syntax a.intern_link {
+  color: #56b04f;
+}
+
+div.wiki_syntax a.extern_link {
+  background: transparent url({T_THEME_PATH}/images/wiki/link_icon.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 16px;
+  color: #436976;
+}
+
+div.wiki_syntax a.wiki_top {
+  background: transparent url({T_THEME_PATH}/images/wiki/tool-top.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 20px;
+  color: #436976;
+}
+
+div.wiki_syntax a.edit {
+  background: transparent url({T_THEME_PATH}/images/wiki/tool-edit.png) 0px 1px no-repeat;
+  padding: 1px 0px 1px 20px;
+  color: #436976;
+}
+
+div.wiki_syntax p {
+  font-size: 100%;
+}
+
+div.wiki_syntax h1 {
+	color: black;
+	font-size: 200%;
+	border-bottom: darkgray 1px solid;
+	padding-left: 5px;
+    margin-left: 5px;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}
+
+div.wiki_syntax h2 {
+	color: black;
+	font-size: 180%;
+	border-bottom: darkgray 1px solid;
+	padding-left: 5px;
+    margin-left: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}
+
+div.wiki_syntax h3 {
+	color: black;
+	font-size: 160%;
+	padding-left: 5px;
+    margin-left: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}
+
+div.wiki_syntax h4 {
+	color: black;
+	font-size: 140%;
+	padding-left: 5px;
+    margin-left: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}
+
+div.wiki_syntax h5 {
+	color: black;
+	font-size: 130%;
+	padding-left: 5px;
+    margin-left: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}
+
+div.wiki_syntax div.level1 { margin-left: 5px; padding-left: 5px; }
+div.wiki_syntax div.level2 { margin-left: 10px; padding-left: 5px; }
+div.wiki_syntax div.level3 { margin-left: 10px; padding-left: 5px; }
+div.wiki_syntax div.level4 { margin-left: 10px; padding-left: 5px; }
+div.wiki_syntax div.level5 { margin-left: 10px; padding-left: 5px; }
+
+div.wiki_syntax ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  list-style-image: none;
+  /*margin: 0 0 0.5em 1.5em;*/
+  color: #638c9c;
+}
+
+div.wiki_syntax ol {
+  line-height: 1.5em;
+  list-style-image: none;
+  /*margin: 0 0 0.5em 1.5em;*/
+  color: #638c9c;
+  font-weight: bold;
+}
+
+div.wiki_syntax li div.li {
+	font-weight: normal;
+	color: black;
+}
+
+div.wiki_syntax li p {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+div.wiki_syntax ol {list-style-type: decimal}
+div.wiki_syntax ol ol {list-style-type: upper-roman}
+div.wiki_syntax ol ol ol {list-style-type: lower-alpha}
+div.wiki_syntax ol ol ol ol {list-style-type: lower-greek}
+
+div.wiki_syntax table {
+  border: 0 none;	
+}
+
+div.wiki_syntax table th {
+  background-image: none;
+  height: 18px;
+}
+
+div.wiki_syntax table.inline {
+  background-color: #ffffff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+div.wiki_syntax table.inline th {
+  padding: 3px;
+  border: 1px solid #ccc;
+  background-color: #dee7ec;
+}
+
+div.wiki_syntax table.inline td {
+  padding: 3px;
+  border: 1px solid #ccc;
+  height: 18px;
+}
+
+div.wiki_syntax pre.code,
+div.wiki_syntax div.code {
+  width: auto !important;
+  padding: 5px;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px dashed #ccc;
+  background-color: #f7f9fa;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+div.wiki_syntax img {
+	border: 0;
+	margin: 0;
+}
+
+div.wiki_syntax img.mediacenter {
+  display: block;
+  margin: 0 auto;
+}
+
+div.wiki_syntax img.mediaright {
+  display: inline;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+div.wiki_syntax img.medialeft {
+  display: inline;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+div.wiki_syntax table td,
+div.wiki_syntax table th {
+  vertical-align: middle;
+}
+
+div.wiki_syntax div.right_sidebar {
+  width: 25%;
+  float: right;
+}
+
+div.wiki_syntax div.toc_header {
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background-color: #dee7ec;
+  margin-bottom: 3px;
+  padding-left: 5px;
+  line-height: 190%;
+}
+
+div.wiki_syntax div.toc {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding-left: 15px;
+}
+
+div.wiki_syntax div.toc ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  padding-left: 0px;
+  list-style-type: disc;
+}
+
+div.wiki_syntax div.toc a:link,
+div.wiki_syntax div.toc a:active,
+div.wiki_syntax div.toc a:visited {
+  color: #436976;
+}
+
+div.wiki_syntax div.toc a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+div.wiki_syntax iframe {
+  border: 1px solid #ccc;
 }

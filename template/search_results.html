@@ -18,6 +18,7 @@
 		<div class="search-box">
 			<!-- IF SEARCH_IN_RESULTS -->
 				<label for="add_keywords">{L_SEARCH_IN_RESULTS}: <input type="text" name="add_keywords" id="add_keywords" value="" class="inputbox narrow" /></label>
+				<input type="hidden" name="show_results" value="posts" />
 				<input class="button2" type="submit" name="submit" value="{L_SEARCH}" />
 			<!-- ENDIF -->
 		</div>
@@ -58,7 +59,7 @@
 						<!-- IF searchresults.S_TOPIC_UNAPPROVED or searchresults.S_POSTS_UNAPPROVED --><a href="{searchresults.U_MCP_QUEUE}">{searchresults.UNAPPROVED_IMG}</a> <!-- ENDIF -->
 						<!-- IF searchresults.S_TOPIC_REPORTED --><a href="{searchresults.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --><br />
 						<!-- IF searchresults.PAGINATION --><strong class="pagination"><span>{searchresults.PAGINATION}</span></strong><!-- ENDIF -->
-						{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME}
+						{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME} 
 						<!-- IF not searchresults.S_TOPIC_GLOBAL -->{L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a><!-- ELSE --> ({L_GLOBAL})<!-- ENDIF -->
 					</dt>
 					<dd class="posts">{searchresults.TOPIC_REPLIES}</dd>
@@ -112,7 +113,7 @@
 			<dd>{L_VIEWS}: <strong>{searchresults.TOPIC_VIEWS}</strong></dd>
 		</dl>
 	<!-- ENDIF -->
-
+	
 	<!-- IF not searchresults.S_IGNORE_POST -->
 		<ul class="searchresults">
 			<li ><a href="{searchresults.U_VIEW_POST}" class="{S_CONTENT_FLOW_END}">{L_JUMP_TO_POST}</a></li>
