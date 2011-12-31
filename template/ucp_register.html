@@ -88,21 +88,22 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 			<h4>{L_COPPA_COMPLIANCE}</h4>
 			<p>{L_COPPA_EXPLAIN}</p>
-			<span class="corners-bottom"><span></span></span></div>
+			<span class="corners-bottom"><span></span></span>
+		</div>
 	</div>
 <!-- ENDIF -->
 
-<div class="panel">
-	<div class="inner"><span class="corners-top"><span></span></span>
-
-		<fieldset class="submit-buttons">
-			{S_HIDDEN_FIELDS}
-			<input class="button2" type="reset" value="{L_RESET}" name="reset" />&nbsp;
-			<input class="button1 default-submit-action" type="submit" name="submit" id="submit" value="{L_SUBMIT}" tabindex="9" />
-			{S_FORM_TOKEN}
-		</fieldset>
-		<span class="corners-bottom"><span></span></span></div>
-</div>
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+			<fieldset class="submit-buttons">
+				{S_HIDDEN_FIELDS}
+				<input class="button2" type="reset" value="{L_RESET}" name="reset" />&nbsp;
+				<input class="button1 default-submit-action" type="submit" tabindex="9" name="submit" id="submit" value="{L_SUBMIT}" />
+				{S_FORM_TOKEN}
+			</fieldset>
+			<span class="corners-bottom"><span></span></span>
+		</div>
+	</div>
 </form>
 
 <!-- INCLUDE overall_footer.html -->
