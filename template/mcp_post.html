@@ -12,9 +12,7 @@
 
 		<div class="postbody">
 			<h3>{L_REPORT_REASON}: {REPORT_REASON_TITLE}</h3>
-			<p class="author">
-				{L_REPORTED} {L_POST_BY_AUTHOR} {REPORTER_FULL} {L_REPORTED_ON_DATE} {REPORT_DATE}
-			</p>
+			<p class="author">{L_REPORTED} {L_POST_BY_AUTHOR} {REPORTER_FULL} &laquo; {REPORT_DATE}</p>
 		<!-- IF not S_POST_REPORTED -->
 			<p class="rules">{L_REPORT_CLOSED}</p>
 		<!-- ENDIF -->
@@ -56,30 +54,26 @@
 		</ul>
 		<!-- ENDIF -->
 
-		<span class="right-box clear" id="expand"><a href="#post_details" onclick="viewableArea(getElementById('post_details'), true); var rev_text = getElementById('expand').getElementsByTagName('a').item(0).firstChild; if (rev_text.data == '{LA_EXPAND_VIEW}'){rev_text.data = '{LA_COLLAPSE_VIEW}'; } else if (rev_text.data == '{LA_COLLAPSE_VIEW}'){rev_text.data = '{LA_EXPAND_VIEW}'}; return false;">{L_EXPAND_VIEW}</a></span>
+		<span id="expand" class="right-box clear"><a href="#post_details" onclick="viewableArea(getElementById('post_details'), true); var rev_text = getElementById('expand').getElementsByTagName('a').item(0).firstChild; if (rev_text.data == '{LA_EXPAND_VIEW}'){rev_text.data = '{LA_COLLAPSE_VIEW}'; } else if (rev_text.data == '{LA_COLLAPSE_VIEW}'){rev_text.data = '{LA_EXPAND_VIEW}'}; return false;">{L_EXPAND_VIEW}</a></span>
 		
 		<h3><a href="{U_VIEW_POST}">{POST_SUBJECT}</a></h3>
 		<!-- IF S_PM -->
 			<p class="author">
 				<strong>{L_SENT_AT}:</strong> {POST_DATE}
 				<br /><strong>{L_PM_FROM}:</strong> {POST_AUTHOR_FULL}
-				<!-- IF S_TO_RECIPIENT --><br /><strong>{L_TO}:</strong> 
-					<!-- BEGIN to_recipient -->
-						<!-- IF to_recipient.NAME_FULL -->{to_recipient.NAME_FULL}<!-- ELSE --><a href="{to_recipient.U_VIEW}" style="color:<!-- IF to_recipient.COLOUR -->{to_recipient.COLOUR}<!-- ELSEIF to_recipient.IS_GROUP -->#0000FF<!-- ENDIF -->;">{to_recipient.NAME}</a><!-- ENDIF -->
-					&nbsp;<!-- END to_recipient -->
-				<!-- ENDIF -->
+			<!-- IF S_TO_RECIPIENT --><br /><strong>{L_TO}:</strong> <!-- BEGIN to_recipient --><!-- IF to_recipient.NAME_FULL -->{to_recipient.NAME_FULL}<!-- ELSE --><a href="{to_recipient.U_VIEW}" style="color:<!-- IF to_recipient.COLOUR -->{to_recipient.COLOUR}<!-- ELSEIF to_recipient.IS_GROUP -->#0000FF<!-- ENDIF -->;">{to_recipient.NAME}</a><!-- ENDIF -->&nbsp;<!-- END to_recipient --><!-- ENDIF -->
 				<!-- IF S_BCC_RECIPIENT --><br /><strong>{L_BCC}:</strong> <!-- BEGIN bcc_recipient --><!-- IF bcc_recipient.NAME_FULL -->{bcc_recipient.NAME_FULL}<!-- ELSE --><a href="{bcc_recipient.U_VIEW}" style="color:<!-- IF bcc_recipient.COLOUR -->{bcc_recipient.COLOUR}<!-- ELSEIF bcc_recipient.IS_GROUP -->#0000FF<!-- ENDIF -->;">{bcc_recipient.NAME}</a><!-- ENDIF -->&nbsp;<!-- END bcc_recipient --><!-- ENDIF -->
 			</p>
 		<!-- ELSE -->
-			<p class="author">{MINI_POST_IMG} {L_POSTED} {L_POST_BY_AUTHOR} {POST_AUTHOR_FULL} {L_REPORTED_ON_DATE} {POST_DATE}</p>
+			<p class="author">{MINI_POST_IMG} {L_POSTED} {L_POST_BY_AUTHOR} {POST_AUTHOR_FULL} &laquo; {POST_DATE}</p>
 		<!-- ENDIF -->
 
 		<!-- IF S_POST_UNAPPROVED -->
 			<form method="post" id="mcp_approve" action="{U_APPROVE_ACTION}">
 
 			<p class="rules">
-				<input class="button1" type="submit" value="{L_APPROVE}" name="action[approve]" /> &nbsp;
-				<input class="button2" type="submit" value="{L_DISAPPROVE}" name="action[disapprove]" />
+				<input class="button2" type="submit" value="{L_DISAPPROVE}" name="action[disapprove]" /> &nbsp;
+				<input class="button1" type="submit" value="{L_APPROVE}" name="action[approve]" />
 				<input type="hidden" name="post_id_list[]" value="{POST_ID}" />
 				{S_FORM_TOKEN}
 			</p>
@@ -192,7 +186,7 @@
 				<h3>{L_FEEDBACK}</h3>
 
 				<!-- BEGIN usernotes -->
-					<span class="small"><strong>{L_REPORTED_BY}: {usernotes.REPORT_BY} {L_REPORTED_ON_DATE} {usernotes.REPORT_AT}</strong></span>
+					<span class="small"><strong>{L_REPORTED_BY}: {usernotes.REPORT_BY} &laquo; {usernotes.REPORT_AT}</strong></span>
 					<!-- IF S_CLEAR_ALLOWED --><div class="right-box"><input type="checkbox" name="marknote[]" value="{usernotes.ID}" /></div><!-- ENDIF -->
 					<div class="postbody">{usernotes.ACTION}</div>
 
@@ -232,7 +226,7 @@
 			<h3>{L_MCP_POST_REPORTS}</h3>
 
 			<!-- BEGIN reports -->
-				<span class="small"><strong>{L_REPORTED_BY}: <!-- IF reports.U_REPORTER --><a href="{reports.U_REPORTER}">{reports.REPORTER}</a><!-- ELSE -->{reports.REPORTER}<!-- ENDIF --> {L_REPORTED_ON_DATE} {reports.REPORT_TIME}</strong></span>
+				<span class="small"><strong>{L_REPORTED_BY}: <!-- IF reports.U_REPORTER --><a href="{reports.U_REPORTER}">{reports.REPORTER}</a><!-- ELSE -->{reports.REPORTER}<!-- ENDIF --> &laquo; {reports.REPORT_TIME}</strong></span>
 				<p><em>{reports.REASON_TITLE}: {reports.REASON_DESC}</em><!-- IF reports.REPORT_TEXT --><br />{reports.REPORT_TEXT}<!-- ENDIF --></p>
 			<!-- END reports -->
 
