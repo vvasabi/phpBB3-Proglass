@@ -271,6 +271,11 @@
 				<div><label for="lock_post"><input type="checkbox" name="lock_post" id="lock_post"{S_LOCK_POST_CHECKED} /> {L_LOCK_POST} [{L_LOCK_POST_EXPLAIN}]</label></div>
 			<!-- ENDIF -->
 
+			<!-- mod: HIDDEN TOPIC -->
+			<!-- IF S_TOPIC_HIDDEN_ALLOWED -->
+			<div><label for="topic_hidden"><input type="checkbox" name="topic_hidden" id="topic_hidden"{S_TOPIC_HIDDEN_CHECKED} /> {L_TOPIC_HIDDEN}</label></div>
+			<!-- ENDIF -->
+
 			<!-- mod : TOPIC COLOUR -->
 			<!-- by : wasabi -->
 			<!-- IF S_COLOUR_TOGGLE -->
