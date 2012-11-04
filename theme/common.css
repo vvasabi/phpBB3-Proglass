@@ -473,3 +473,9 @@ p.rules a {vertical-align: middle;clear: both}
 	background: transparent;
 }
 .center {text-align: center}
+
+img.emoji {
+  width: 16px;
+  height: 16px;
+}
+
