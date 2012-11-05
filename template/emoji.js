@@ -1,0 +1,1 @@
+../../../emoji-support/styles/style/template/emoji.js
