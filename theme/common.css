@@ -475,7 +475,7 @@ p.rules a {vertical-align: middle;clear: both}
 .center {text-align: center}
 
 img.emoji {
-  width: 16px;
-  height: 16px;
+	width: 1.5em;
+	height: 1.5em;
 }
 
